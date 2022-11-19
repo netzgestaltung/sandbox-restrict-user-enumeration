@@ -6,6 +6,7 @@ In your `/wp-content/` directory create a folder `mu-plugins` if it's not allrea
 Upload the files to this folder. No further activation neccesarry.
 
 ## Updates?
-Every thing is handwork, you need to update yourself.
+Same as install.
+Since every thing here is handwork, you need to upload yourself.
 
 HF & GL.
