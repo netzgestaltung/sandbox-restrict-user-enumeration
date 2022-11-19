@@ -1,14 +1,14 @@
 # sandbox-restrict-user-enumeration
 Restrict public user enumeration in a WordPress site - multisite compatible
 
-## what happens here
+## What happens here
 - removes the rest api endpoinis for`wp-json/wp/v2/users(/<n>|<username>)` if not logged in or subscriber in a multisite
 - redirects any author archive pages `/?author=<n>` to `/404`
 
-## when to use
+## When to use
 Use on Not-Blog pages where you don't want to show author information at all this brings you additional silence in login-form brut-force attacs
 
-## different way to approach
+## Different way to approach
 On Blog or (Multi-)author pages you should use a capability plugin and disable edit/write posts/pages access for administrators. They will then not be listed anymore (in theory, i still have to test this).
 
 ## How to install
