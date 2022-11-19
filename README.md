@@ -21,7 +21,7 @@ Same as install.
 Since every thing here is handwork, you need to upload yourself.
 
 ## Whats next?
-Other Plugins like YoastSeo may bring in new exposure like the author infomration in opengraph-tags for Slack
+Other Plugins like YoastSeo may bring in new exposure like the author information in opengraph-tags for Slack
 
 ### Solutions
 - Remove YoastSeo - its bloated at all, use Redirection Plugin and Custom Fields instead
