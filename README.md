@@ -30,4 +30,4 @@ Other Plugins like YoastSeo may bring in new exposure like the author informatio
 ## Flaws
 If you use a Rest API control plugin like RestAPI Disabler it will not be able to control the Users Endpoint anymore. Other Endpoints will remain controlable.
 
-HF & GL.
+GL & HF.
