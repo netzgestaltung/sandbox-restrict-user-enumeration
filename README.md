@@ -1,5 +1,5 @@
 # sandbox-restrict-user-enumeration
-Restrict public user enumeration in a WordPress (multi)site
+Restrict public user enumeration in a WordPress site - multisite compatible
 
 ## How to install
 In your `/wp-content/` directory create a folder `mu-plugins` if it's not allready there.
