@@ -6,10 +6,11 @@ Restrict public user enumeration in a WordPress site - multisite compatible
 - redirects any author archive pages `/?author=<n>` to `/404`
 
 ## When to use
-Use on Not-Blog pages where you don't want to show author information at all this brings you additional silence in login-form brut-force attacs
+Use on Not-Blog pages where you don't want to show author information at all this brings you additional silence in login-form brut-force attacs.
+It does however not replace login-form security, so take care of that.
 
 ## Different way to approach
-On Blog or (Multi-)author pages you should use a capability plugin and disable edit/write posts/pages access for administrators. They will then not be listed anymore (in theory, i still have to test this).
+On Blog or (Multi-)author pages you should use a capability plugin and disable edit/write posts/pages access for administrators. They will then not be listed anymore (in theory, i still have to test this). If that works, the authors listing will does what it says.
 
 ## How to install
 In your `/wp-content/` directory create a folder `mu-plugins` if it's not allready there.
