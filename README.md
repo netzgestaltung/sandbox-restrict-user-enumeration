@@ -3,7 +3,7 @@ Restrict public user enumeration in a WordPress site - multisite compatible
 
 ## What happens here
 - removes the rest api endpoinis for`wp-json/wp/v2/users(/<n>|<username>)` if not logged in or subscriber (in a multisite)
-- redirects any author archive pages `/?author=<n>` to `/404`
+- redirects any author archive pages `/?author=<n>`, `/author/<n>` to `/404`
 
 ## When to use
 Use on Not-Blog pages where you don't want to show author information at all this brings you additional silence in login-form brut-force attacs.
