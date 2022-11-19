@@ -1,4 +1,4 @@
-# sandbox-restrict-user-enumeration
+# Restrict WordPress user enumeration
 Restrict public user enumeration in a WordPress site - multisite compatible
 
 ## What happens here
