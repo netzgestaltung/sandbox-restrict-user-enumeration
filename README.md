@@ -3,7 +3,7 @@ Restrict public user enumeration in a WordPress site - multisite compatible
 
 ## what happens here
 - removes the rest api endpoinis for`wp-json/wp/v2/users` if not logged in
-- redirects any author archive pages `/?author=1` to `/404`
+- redirects any author archive pages `/?author=<n>` to `/404`
 
 ## How to install
 In your `/wp-content/` directory create a folder `mu-plugins` if it's not allready there.
