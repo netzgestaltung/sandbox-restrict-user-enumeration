@@ -36,7 +36,7 @@ add_action('plugins_loaded', 'sandbox_restrict_user_enumeration');
 
 function sandbox_restrict_user_enumeration(){
   // Removes the endpoints for '/wp/v2/users'
-  add_filter('rest_endpoints', 'sandbox_rest_endpoints');
+  add_filter('rest_endpoints', 'sandbox_filter_rest_endpoint_users');
   
   // Redirect Author Page to 404
   add_action('template_redirect', 'sandbox_author_redirect');
@@ -55,7 +55,7 @@ function sandbox_restrict_user_enumeration(){
  * - https://wordpress.stackexchange.com/questions/388307/disable-part-of-endpoints-wordpress-api
  * - https://wpreset.com/remove-default-wordpress-rest-api-routes-endpoints/
  */
-function sandbox_rest_endpoints($endpoints){
+function sandbox_filter_rest_endpoint_users($endpoints){
   $routes = array('/wp/v2/users', '/wp/v2/users/(?P<id>[\d]+)');
   
   if ( !is_user_logged_in() || current_user_can_for_blog(get_current_blog_id(), 'edit_posts') === false ) {
