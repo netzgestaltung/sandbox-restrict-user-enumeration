@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Sandbox restrict public user enumeration
- * Version: 1.0.0
+ * Version: 1.0.1
  * Plugin URI: http://www.dev-themes.com
  * Description: Restrict public user enumeration in a WordPress multisite
  * Author: Thomas Fellinger
  * Author URI: http://www.netzgestaltung.at
  * License: GPL v2
- * Copyright 2020  Thomas Fellinger  (email : office@netzgestaltung.at)
+ * Copyright 2022  Thomas Fellinger  (email : office@netzgestaltung.at)
 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
