@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Sandbox restrict public user enumeration
- * Version: 1.0.1
+ * Version: 1.0.2
  * Plugin URI: http://www.dev-themes.com
  * Description: Restrict public user enumeration in a WordPress multisite
  * Author: Thomas Fellinger
