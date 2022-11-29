@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Sandbox restrict public user enumeration
- * Version: 1.0.2
+ * Version: 1.0.3
  * Plugin URI: http://www.dev-themes.com
  * Description: Restrict public user enumeration in a WordPress multisite
  * Author: Thomas Fellinger
@@ -26,6 +26,11 @@
  * WordPress does not automagically looks into folders here
  * @see https://wordpress.org/support/article/must-use-plugins/
  * @see https://premium.wpmudev.org/blog/why-you-shouldnt-use-functions-php/
+ *
+ * Changelog
+ * @added 1.0.2 2022-11-24 sandbox_filter_xml_sitemap_users
+ * @added 1.0.1 2022-11-21 revised documentation
+ * @added 1.0.0 2022-11-19 sandbox_filter_rest_endpoint_users, sandbox_author_redirect
  */
 
 /**
@@ -38,6 +43,9 @@ function sandbox_restrict_user_enumeration(){
   // Removes the endpoints for '/wp/v2/users'
   add_filter('rest_endpoints', 'sandbox_filter_rest_endpoint_users');
   
+  // Removes the author listing from the XML Sitemap
+  add_filter('wp_sitemaps_add_provider', 'sandbox_filter_xml_sitemap_users', 10, 2);
+  
   // Redirect Author Page to 404
   add_action('template_redirect', 'sandbox_author_redirect');
 }
@@ -47,7 +55,7 @@ function sandbox_restrict_user_enumeration(){
  * - if not logged in
  * - not allowed to edit posts in current site/blog
  * 
- * @added 2022-11-11 Thomas Fellinger
+ * @added 1.0.0 2022-11-11 Thomas Fellinger
  * @see 
  * - https://maheshwaghmare.com/wordpress/blog/default-rest-api-endpoints/
  * - https://developer.wordpress.org/reference/hooks/rest_endpoints/
@@ -69,10 +77,26 @@ function sandbox_filter_rest_endpoint_users($endpoints){
 }
 
 /**
+ * Removes the author listing from the XML Sitemap
+ * 
+ * @added 1.0.2 2022-11-24 Thomas Fellinger
+ * @see 
+ * - https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5/#highlighter_299563
+ */
+function sandbox_filter_xml_sitemap_users($provider, $name){
+  if ( !is_user_logged_in() || current_user_can_for_blog(get_current_blog_id(), 'edit_posts') === false ) {
+    if ( $name === 'users' ) {
+      $provider = false;
+    }
+  }
+  return $provider;
+}
+
+/**
  * Redirect Author Page to 404
  * - does not show something to see here
  * 
- * @added 2022-11-19 Thomas Fellinger
+ * @added 1.0.0 2022-11-19 Thomas Fellinger
  * @see 
  * - https://www.vpsbasics.com/cms/how-to-disable-the-author-page-in-wordpress/
  */
