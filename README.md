@@ -26,7 +26,7 @@ Other Plugins like YoastSeo may bring in new exposure like the author informatio
 
 ### Solutions
 - Remove YoastSeo - its bloated at all, use Redirection Plugin and Custom Fields instead
-- If you cant removce it whatsoever - check all YoastSeo options to get a complete solution
+- If you cant remove it whatsoever - check all YoastSeo options to get a complete solution
 
 ## Flaws
 If you use a Rest API control plugin like RestAPI Disabler it will not be able to control the Users Endpoint anymore. Other Endpoints will remain controlable.
