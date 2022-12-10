@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Sandbox restrict public user enumeration
- * Version: 1.0.2
+ * Version: 1.0.3
  * Plugin URI: http://www.dev-themes.com
  * Description: Restrict public user enumeration in a WordPress multisite
  * Author: Thomas Fellinger
@@ -26,6 +26,11 @@
  * WordPress does not automagically looks into folders here
  * @see https://wordpress.org/support/article/must-use-plugins/
  * @see https://premium.wpmudev.org/blog/why-you-shouldnt-use-functions-php/
+ *
+ * Changelog
+ * @added 1.0.3 2022-11-24 sandbox_filter_xml_sitemap_users
+ * @added 1.0.2 2022-11-21 revised documentation
+ * @added 1.0.1 2022-11-19 sandbox_filter_rest_endpoint_users, sandbox_author_redirect
  */
   require WPMU_PLUGIN_DIR . '/sandbox-restrict-user-enumeration/sandbox-restrict-user-enumeration.php';
 ?>
